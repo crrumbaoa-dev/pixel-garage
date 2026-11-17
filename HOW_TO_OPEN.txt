@@ -1,0 +1,22 @@
+PIXEL GARAGE: HOW TO OPEN IT
+
+1. Unzip pixel-garage.zip. Move the "pixel-garage" folder to your Desktop.
+
+2. Open VS Code. Click File > Open Folder. Pick "pixel-garage" on your Desktop.
+
+3. To play:
+   - Easiest: in Finder, double-click index.html. It opens in Chrome.
+   - Or in VS Code: right-click index.html > "Open with Live Server"
+     (needs the Live Server extension). It reloads every time you save.
+
+4. To run the tests, open the terminal in VS Code (Terminal > New Terminal).
+   It already starts inside the pixel-garage folder. Type:
+
+   node tests/cars.test.js
+
+   You should see "14 passed".
+
+Controls: arrow keys or A/D to walk, hold Shift to run, E to look at a car, C for the collection book,
+Esc for the menu. While driving, arrow keys change lanes and P pauses.
+
+To start over: on the title screen click "New game", then click it again to confirm.

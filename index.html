@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Garage</title>
+  <meta name="description" content="A pixel art museum game about luxury and vintage cars.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-scene="title">
+  <header class="topbar">
+    <p class="brand"><span class="brand-dot" aria-hidden="true"></span>Pixel Garage</p>
+    <nav class="top-actions" aria-label="Game">
+      <button class="btn small" id="btn-book" data-only="gallery">Collection <kbd>C</kbd></button>
+      <button class="btn small" id="btn-menu" data-only="gallery drive">Menu <kbd>Esc</kbd></button>
+      <button class="btn small" id="btn-sound" aria-pressed="true"><span>Sound on</span></button>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="stage">
+      <canvas id="game" width="320" height="180" tabindex="0" role="img"
+        aria-label="Game screen. Use the arrow keys to move and E to interact. Updates are read out below."></canvas>
+      <div id="stage-ui" class="stage-ui" hidden></div>
+      <div id="toast" class="toast" role="status"></div>
+    </div>
+    <aside id="dock" class="dock" hidden></aside>
+  </main>
+
+  <div class="pad" aria-label="On-screen controls">
+    <button class="pad-btn" data-pad="ArrowLeft" aria-label="Left">◀</button>
+    <button class="pad-btn drive-only" data-pad="ArrowDown" aria-label="Slow down">▼</button>
+    <button class="pad-btn drive-only" data-pad="ArrowUp" aria-label="Speed up">▲</button>
+    <button class="pad-btn act" data-pad="Action" aria-label="Look or interact">E</button>
+    <button class="pad-btn" data-pad="ArrowRight" aria-label="Right">▶</button>
+  </div>
+
+  <p id="live" class="sr-only" aria-live="polite"></p>
+
+  <div id="overlay" class="overlay" hidden>
+    <div id="panel" class="panel" role="dialog" aria-modal="true" tabindex="-1"></div>
+  </div>
+
+  <script src="js/pixel.js"></script>
+  <script src="js/cars.js"></script>
+  <script src="js/carart.js"></script>
+  <script src="js/people.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/engine-sound.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/drive.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
